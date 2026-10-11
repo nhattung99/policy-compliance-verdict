@@ -101,12 +101,16 @@ python -m venv .venv
 pytest tests/test_policy_compliance_verdict.py -v
 ```
 
-## Contract address
+## Deployment
 
-- **CONTRACT_ADDRESS:** `0x...TBD after deploy`
+- **CONTRACT_ADDRESS:** `0x748765937c548119Ad50eE525112Eda1687f203F`
 - **NETWORK:** studionet
+- **Deploy transaction:** `0xccf37ee92ce147522ea5b7711cff039edbb3385881d9b2437f44956cb8c9329a` (FINALIZED, GenVM result SUCCESS, consensus Accepted)
+- **Explorer:** https://explorer-studio.genlayer.com/address/0x748765937c548119Ad50eE525112Eda1687f203F
 
-### Worked example (expected output from the local test suite)
+A read-only `get_count()` call against this address returned `0`. The account has the deploy transaction only, so no compliance check is stored on-chain yet. The worked example below is the expected result from the local test suite (`test_compliant_verdict`), not a receipt from studionet.
+
+### Worked example (expected output, not a live studionet verdict)
 
 Input to `submit_check`:
 
